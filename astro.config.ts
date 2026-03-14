@@ -15,6 +15,9 @@ import { SITE } from "./src/config";
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
+  // GitHub Pages 部署在子路径，需要配置 base
+  base: '/sora-blog-astro',
+  output: 'static',
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
