@@ -21,7 +21,7 @@ export function getPath(
     .slice(0, -1) // remove the last segment_ file name_ since it's unnecessary
     .map(segment => slugifyStr(segment)); // slugify each segment path
 
-  const basePath = includeBase ? "posts" : "";
+  const basePath = includeBase ? "/posts" : "";
 
   // Making sure `id` does not contain the directory
   const blogId = id.split("/");
@@ -29,12 +29,8 @@ export function getPath(
 
   // If not inside the sub-dir, simply return the file path
   if (!pathSegments || pathSegments.length < 1) {
-    const path = [basePath, slug].filter(Boolean).join("/");
-    // Return relative path (Astro will resolve with base automatically)
-    return path;
+    return [basePath, slug].join("/");
   }
 
-  const path = [basePath, ...pathSegments, slug].filter(Boolean).join("/");
-  // Return relative path (Astro will resolve with base automatically)
-  return path;
+  return [basePath, ...pathSegments, slug].join("/");
 }
