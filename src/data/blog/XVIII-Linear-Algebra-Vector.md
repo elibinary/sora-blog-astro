@@ -3,9 +3,9 @@ author: 鳄梨
 pubDatetime: 2017-03-26T05:21:38.000Z
 title: [学习笔记] 理解线性代数 - 向量&向量空间
 draft: false
+description: 向量指一个同时具有大小和方向的几何对象
 tags:
   - Math
-description: 向量指一个同时具有大小和方向的几何对象
 ---
 
 > 向量指一个同时具有大小和方向的几何对象
