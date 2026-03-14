@@ -18,6 +18,7 @@ export default defineConfig({
   // GitHub Pages 部署在子路径，需要配置 base
   base: '/sora-blog-astro',
   output: 'static',
+  trailingSlash: 'always',
   integrations: [
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
