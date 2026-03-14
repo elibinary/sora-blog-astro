@@ -1,7 +1,7 @@
 ---
 author: 鳄梨
 pubDatetime: 2017-04-08T04:54:17.000Z
-title: [学习笔记]理解线性代数 - 变换
+title: "[学习笔记]理解线性代数 - 变换"
 draft: false
 tags:
   - Math

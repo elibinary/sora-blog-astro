@@ -1,7 +1,7 @@
 ---
 author: 鳄梨
 pubDatetime: 2017-04-23T07:00:34.000Z
-title: [学习笔记]理解线性代数 - 应用与逆
+title: "[学习笔记]理解线性代数 - 应用与逆"
 draft: false
 tags:
   - Math

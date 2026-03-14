@@ -1,7 +1,7 @@
 ---
 author: 鳄梨
 pubDatetime: 2017-04-22T06:48:49.000Z
-title: [学习笔记]理解线性代数 - 行列式
+title: "[学习笔记]理解线性代数 - 行列式"
 draft: false
 tags:
   - Math

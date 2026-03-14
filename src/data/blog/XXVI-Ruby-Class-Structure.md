@@ -1,7 +1,7 @@
 ---
 author: 鳄梨
 pubDatetime: 2017-05-30T07:10:06.000Z
-title: [读书笔记] Ruby 类 - 结构
+title: "[读书笔记] Ruby 类 - 结构"
 draft: false
 tags:
   - Ruby

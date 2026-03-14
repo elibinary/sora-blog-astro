@@ -1,7 +1,7 @@
 ---
 author: 鳄梨
 pubDatetime: 2017-05-21T03:44:47.000Z
-title: [读书笔记] Ruby 对象 - 结构
+title: "[读书笔记] Ruby 对象 - 结构"
 draft: false
 tags:
   - Ruby
