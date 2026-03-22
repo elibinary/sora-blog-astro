@@ -800,4 +800,19 @@ Bash is all you need. Real agents are all the universe needs.
 
 ---
 
+## 参考项目
+
+- **learn-claude-code**: https://github.com/shareAI-lab/learn-claude-code
+  - 本文分析的原始项目，12 个渐进式 session 的完整实现
+- **Kode Agent CLI**: https://github.com/shareAI-lab/Kode-cli
+  - 开箱即用的 Coding Agent CLI
+- **Kode Agent SDK**: https://github.com/shareAI-lab/Kode-agent-sdk
+  - 可嵌入应用的 Agent SDK
+- **claw0**: https://github.com/shareAI-lab/claw0
+  - Always-On Assistant（Heartbeat + Cron + IM）
+- **OpenClaw**: https://github.com/openclaw/openclaw
+  - 多通道 AI 助手框架
+
+---
+
 **完**
