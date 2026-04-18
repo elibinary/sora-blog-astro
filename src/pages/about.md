@@ -73,7 +73,7 @@ description: 关于旧时的足迹 - 记录技术学习与成长的博客
 ## 联系方式
 
 - **GitHub**: [@elibinary](https://github.com/elibinary)
-- **博客**: [旧时的足迹](https://elibinary.github.io/sora-blog-astro/)
+- **博客**: [旧时的足迹](https://sora.elibinary.online/)
 
 ---
 

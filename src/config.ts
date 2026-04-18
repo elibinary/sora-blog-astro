@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://elibinary.github.io/sora-blog-astro/",
+  website: "https://sora.elibinary.online/",
   author: "鳄梨",
   profile: "https://github.com/elibinary",
   desc: "书海中的足迹",
