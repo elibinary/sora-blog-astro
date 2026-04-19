@@ -3,7 +3,7 @@ export const SITE = {
   author: "鳄梨",
   profile: "https://github.com/elibinary",
   desc: "书海中的足迹",
-  title: "旧时的足迹",
+  title: "寻找火花",
   ogImage: "avatar.svg",
   lightAndDarkMode: true,
   postPerIndex: 4,

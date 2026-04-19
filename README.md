@@ -1,4 +1,4 @@
-# 旧时的足迹 - 个人技术博客
+# 寻找火花 - 个人技术博客
 
 > 📚 书海中的足迹 - 记录技术学习与成长
 
@@ -130,7 +130,7 @@ export const SITE = {
   website: "https://elibinary.github.io/sora-blog-astro/",
   author: "鳄梨",
   desc: "记录技术学习与成长",
-  title: "旧时的足迹",
+  title: "寻找火花",
   // ...
 };
 ```
