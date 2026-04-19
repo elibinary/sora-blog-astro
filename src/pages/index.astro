@@ -23,8 +23,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
     <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-      <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-        Mingalaba
+      <h1 class="my-4 inline-block text-2xl font-semibold tracking-wide sm:my-4">
+        Start on a journey
       </h1>
       <a
         target="_blank"
@@ -41,30 +41,24 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         <span class="sr-only">RSS Feed</span>
       </a>
 
-      <p>
-        AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro
-        blog theme. This theme follows best practices and provides accessibility
-        out of the box. Light and dark mode are supported by default. Moreover,
-        additional color schemes can also be configured.
-      </p>
-      <p class="mt-2">
-        Read the blog posts or check
-        <LinkButton
-          class="underline decoration-dashed underline-offset-4 hover:text-accent"
-          href="https://github.com/satnaing/astro-paper#readme"
-        >
-          README
-        </LinkButton> for more info.
-      </p>
-      {
-        // only display if at least one social link is enabled
-        SOCIALS.length > 0 && (
-          <div class="mt-4 flex max-sm:flex-col sm:items-center">
-            <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+      <pre class="mt-4 overflow-x-auto text-xs sm:text-sm leading-tight font-mono text-accent">
+                              (@@) (  ) (@)  ( )  @@    ()    @     O     @     O      @
+                         (   )
+                     (@@@@)
+                  (    )
+
+                (@@@)
+             ====        ________                ___________
+         _D _|  |_______/        \__I_I_____===__|_________|
+          |(_)---  |   H\________/ |   |        =|Hi! ___|      _________________
+          /     |  |   H  |  |     |   |         |\O/ (O)|     _|                \_____A
+         |      |  |   H  |__--------------------| [___] |   =|                        |
+         | ________|___H__/__|_____/[][]~\_______|       |   -|                        |
+         |/ |   |-----------I_____I [][] []  D   |=======|____|________________________|_
+       __/ =| o |=-~~\  /~~\  /~~\  /~~\ ____Y___________|__|__________________________|_
+        |/-=|___|=   O=====O=====O=====O|_____/~\___/          |_D__D__D_|  |_D__D__D_|
+         \_/      \__/  \__/  \__/  \__/      \_/               \_/   \_/    \_/   \_/
+      </pre>
     </section>
 
     {
