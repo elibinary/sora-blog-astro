@@ -37,7 +37,7 @@ export const GET: APIRoute = async ({ props }) => {
   } catch {
     const staticOgPath = path.resolve("public/astropaper-og.jpg");
     const fileBuffer = fs.readFileSync(staticOgPath);
-    return new Response(fileBuffer, {
+    return new Response(new Uint8Array(fileBuffer), {
       headers: { "Content-Type": "image/jpeg" },
     });
   }

@@ -14,7 +14,7 @@ export const GET: APIRoute = async ({ url }) => {
     // Fallback: serve static OG image when Google Fonts is unavailable
     const staticOgPath = path.resolve("public/astropaper-og.jpg");
     const fileBuffer = fs.readFileSync(staticOgPath);
-    return new Response(fileBuffer, {
+    return new Response(new Uint8Array(fileBuffer), {
       headers: { "Content-Type": "image/jpeg" },
     });
   }
