@@ -163,3 +163,58 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 ---
 
 **Better late than never.** ✨
+
+### 发布流程：新建文章 → 本地预览 → 推送发布
+
+以下是完整的文章发布工作流：
+
+#### 1. 创建文章
+
+在 `src/data/blog/` 下创建 `.md` 文件，**文件名使用英文**（URL slug 直接取自文件名）：
+
+```markdown
+---
+author: 鳄梨
+pubDatetime: 2026-04-25T10:00:00+08:00
+title: 文章标题
+draft: false
+tags:
+  - 标签1
+  - 标签2
+description: 文章摘要，会显示在列表页和 SEO 中
+---
+
+正文内容...
+```
+
+**关键字段说明**：
+- `pubDatetime`：发布时间，**必须设为当前或过去的时间**，未来时间的文章在生产构建中会被过滤掉（`postFilter.ts` 逻辑，dev 环境不受限制）
+- `draft: true` 的文章在生产构建中同样不可见
+- `series` / `seriesOrder`：可选，用于组织系列文章
+
+#### 2. 本地预览
+
+```bash
+pnpm run dev
+# 访问 http://localhost:4321
+```
+
+确认文章在首页列表和详情页都正常显示。
+
+#### 3. 推送发布
+
+```bash
+git add src/data/blog/新文章.md
+git commit -m "feat: add 新文章标题"
+git push origin main
+```
+
+推送后 GitHub Actions 自动构建部署到 https://sora.elibinary.online
+
+#### ⚠️ 常见问题
+
+| 问题 | 原因 | 解决 |
+|------|------|------|
+| 本地可见、线上不可见 | `pubDatetime` 设成了未来时间 | 改为当前或过去的时间 |
+| 构建报错 `fetch failed` (Google Fonts) | `og.png.ts` 依赖 Google Fonts，网络不通时崩溃 | 已加 try/catch fallback，无需处理 |
+| `Response` 类型报错 `Buffer not assignable` | `fs.readFileSync` 返回 `Buffer` | 用 `new Uint8Array(buffer)` 包装 |
