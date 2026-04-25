@@ -3,6 +3,8 @@ import { getCollection, type CollectionEntry } from "astro:content";
 import { getPath } from "@/utils/getPath";
 import { generateOgImageForPost } from "@/utils/generateOgImages";
 import { SITE } from "@/config";
+import fs from "node:fs";
+import path from "node:path";
 
 export async function getStaticPaths() {
   if (!SITE.dynamicOgImage) {
@@ -27,8 +29,16 @@ export const GET: APIRoute = async ({ props }) => {
     });
   }
 
-  const buffer = await generateOgImageForPost(props as CollectionEntry<"blog">);
-  return new Response(new Uint8Array(buffer), {
-    headers: { "Content-Type": "image/png" },
-  });
+  try {
+    const buffer = await generateOgImageForPost(props as CollectionEntry<"blog">);
+    return new Response(new Uint8Array(buffer), {
+      headers: { "Content-Type": "image/png" },
+    });
+  } catch {
+    const staticOgPath = path.resolve("public/astropaper-og.jpg");
+    const fileBuffer = fs.readFileSync(staticOgPath);
+    return new Response(fileBuffer, {
+      headers: { "Content-Type": "image/jpeg" },
+    });
+  }
 };
